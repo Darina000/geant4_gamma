@@ -54,19 +54,7 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
     G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
     
     G4double edep = aStep->GetTotalEnergyDeposit();
-    /*
-    
-   // G4RunManager::GetRunManager()->GetNonConstCurrentRun();
-    G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
-    const G4StepPoint* endPoint = aStep->GetPostStepPoint();
-    G4Track *track = aStep->GetTrack();
-    G4double Ekin = track->GetKineticEnergy();
-    G4int trackID  = aStep->GetTrack()->GetTrackID();
-    G4int parentID = aStep->GetTrack()->GetParentID();
- G4VPhysicalVolume* volume
- = aStep->GetPreStepPoint()->GetTouchableHandle()->GetVolume();
-  G4double edep = aStep->GetTotalEnergyDeposit();
-    */
+
     if (raz != 0){
      analysisManager->FillNtupleDColumn(0, raz);
      //  cout << "added  "  <<  edep << "  parent id" <<  parentID << endl;
