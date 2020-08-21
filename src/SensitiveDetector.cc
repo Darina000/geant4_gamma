@@ -113,64 +113,7 @@ G4bool SensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *history
     G4int trackID  = aStep->GetTrack()->GetTrackID();
     G4int parentID = aStep->GetTrack()->GetParentID();
     G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
-     /*
-    G4TouchableHandle touchable = aStep ->GetPreStepPoint()->GetTouchableHandle();
-    G4int copyNo = touchable-> GetVolume(0)-> GetCopyNo();
-    G4double eDep  = aStep->GetTotalEnergyDeposit();
-     cout << "eDep  " << " " <<eDep   << endl;
-    G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
-   
-        G4int trackID  = aStep->GetTrack()->GetTrackID();
-        G4int parentID = aStep->GetTrack()->GetParentID();
-        G4ThreeVector Momentum = aStep->GetPostStepPoint()->GetMomentum();
-       // G4int aTrack = aStep->GetTrack()
-       // if ( trackID > 1 )
-       // {
-           // cout << "eDep" << " " << eDep << endl;
-        //cout << Momentum  << endl;
-       // cout << "trackID" << " " << trackID  << endl;
-       // cout << "parentID" << " " << parentID << endl;
-    G4String name = aStep->GetTrack()->GetDefinition()->GetParticleName();
-    G4double y = (aStep->GetTrack()->GetPosition()).y();
-    G4double x = (aStep->GetTrack()->GetPosition()).x();
-    G4double z = (aStep->GetTrack()->GetPosition()).z();
-            
     
-       // }
-    G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
-    //  G4VPhysicalVolume* volume = aStep->GetPreStepPoint()->GetTouchableHandle()->GetVolume();
-    
-    
-    G4double en = aStep->GetTrack()->GetKineticEnergy();
-    edep_step = aStep->GetTotalEnergyDeposit();
-    
-    G4double sum = edep_step + en;
-    */
-// if ( ( edep_step != 0 ) /*  &&  name == "e-" */ ){
-  //      cout << name  << " x, y, z: " << x << " " << y << " "<< z << "TEnD in sen" << edep_step << " -kinE_ "  << " pID " << parentID << endl;
-        
-   // analysisManager->FillNtupleDColumn(0, eDep );
-       // analysisManager->FillNtupleDColumn(1, x);
-        //analysisManager->FillNtupleDColumn(2, y);
-    
-     //  analysisManager -> AddNtupleRow();
-    //}
-    
-    //cout << volume->GetName()<< "volume->GetName()" << endl;
-  //  if(volume->GetName()=="sens_det0"){
-    //  edep_step = aStep->GetTotalEnergyDeposit();
-      //edep = edep+edep_step;
-    
-    //G4double en = aStep->GetTrack()->GetKineticEnergy();
-    // if ((parentID == 0) && (edep_step != 0 )){
-           //cout << edep_step << "- edep_step "  << " trackID " << trackID << "parentID" << parentID << endl;
-    //     analysisManager->FillNtupleDColumn(0,  edep);
-        //    cout << "edep_step added  "  << en + edep << endl;
-            
-       //   analysisManager -> AddNtupleRow();
-        //  }
-
-   // }
     
    return true;
     
